@@ -21,6 +21,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="../../../welcome.html">首页</a>
+        <a href="">毕业设计管理</a>
         <a href="">毕业答辩管理</a>
         <a>
           <cite>毕业答辩审核管理</cite>
@@ -74,6 +75,20 @@
                     <option>未审核</option>
                 </select>
             </div>
+            <div class="layui-input-inline">
+                <select name="contrller">
+                    <option>是否填写论文评审</option><!--通过判断是否有审核结果-->
+                    <option>已填写</option>
+                    <option>未填写</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select name="contrller">
+                    <option>是否填写成绩表</option><!--通过判断是否有审核结果-->
+                    <option>已填写</option>
+                    <option>未填写</option>
+                </select>
+            </div>
             <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
         </form>
     </div>
@@ -81,8 +96,8 @@
 
     <!--操作区域-->
     <xblock>
-        <button class="layui-btn" onclick="x_admin_show('添加论文及答辩结果','./graduateReportManage-addResult.html')">添加论文及答辩结果 </button>
-        <button class="layui-btn" onclick="x_admin_show('添写答辩委员会决议','./graduateReportManage-addFinalResult.html')">添写答辩委员会决议 </button>
+        <button class="layui-btn" onclick="x_admin_show('填写论文评审记录','./addThesisComment.html')">填写论文评审记录 </button>
+        <button class="layui-btn" onclick="x_admin_show('填写答辩成绩表','./addFinalResult.html')">填写答辩成绩表 </button>
         <button class="layui-btn layui-btn-normal" onclick="x_admin_show('统计','./statistics.html')">统计 </button>
         <button class="layui-btn layui-btn-normal" onclick="">导出数据 </button>
     </xblock>
@@ -100,12 +115,12 @@
             <th>姓名</th>
             <th>班级</th>
             <th>毕设类型</th>
-            <th>毕设编号</th>
             <th>课题名称</th>
-            <th>毕设人数</th>
+            <th>同组人数</th>
             <th>答辩情况</th>
             <th>资料上传情况</th>
-            <th>添写答辩委员会决议</th>
+            <th>论文评审情况</th>
+            <th>成绩表填写情况</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -123,9 +138,10 @@
             <td>阿萨德发</td>
             <td>3</td>
             <td>已答辩</td>
-            <td>优</td>
+            <td>已填写</td>
+            <td>已填写</td>
             <td class="td-manage">
-                <a title="审核评价" onclick="x_admin_show('审核评价','middleReportManage-viewResult.html')">
+                <a title="审核评价" onclick="x_admin_show('审核评价','graduateReportManage-view.html')">
                     <i class="layui-icon">&#xe63c;</i>
                 </a>
             </td>

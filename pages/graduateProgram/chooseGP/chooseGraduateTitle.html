@@ -22,7 +22,7 @@
       <span class="layui-breadcrumb">
         <a href="../../../welcome.html">首页</a>
         <a href="">毕业设计管理</a>
-        <a href="">选择课题管理</a>
+        <a href="">课题管理</a>
         <a>
           <cite>选择课题</cite>
         </a>
@@ -61,7 +61,6 @@
         <thead>
         <tr>
             <th>选择课题</th>
-            <th>毕设编号</th>
             <th>教师名称</th>
             <th>课题名称</th>
             <th>课题类型</th>
@@ -76,7 +75,6 @@
                 <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">
                     &#xe605;</i></div>
             </td>
-            <td>201700917</td>
             <td>老王</td>
             <td>课题名称</td>
             <td>课题类型</td>
@@ -84,7 +82,7 @@
             <td>成果形式</td>
 
             <td class="td-manage">
-                <a title="查看" onclick="x_admin_show('详细信息','chooseGraduateTitle-detail.html')" href="javascript:;">
+                <a title="查看" onclick="x_admin_show('详细信息','chooseGraduateTitle-view.html')" href="javascript:;">
                     <i class="layui-icon">&#xe63c;</i>
                 </a>
             </td>
@@ -101,8 +99,7 @@
     <table class="layui-table">
         <thead>
         <tr>
-            <th>选择第一志愿</th>
-            <th>毕设编号</th>
+            <th>选择</th>
             <th>教师名称</th>
             <th>课题名称</th>
             <th>课题类型</th>
@@ -113,18 +110,14 @@
         </thead>
         <tbody>
         <tr>
-            <td>
-                <input type="radio" name="choose" value="第一选择" title="第一选择">第一选择&nbsp;&nbsp;
-                <input type="radio" name="choose" value="第二选择" title="第一选择">第二选择
-            </td>
-            <td>201700917</td>
+            <td>第一选择</td>
             <td>老王</td>
             <td>课题名称</td>
             <td>课题类型</td>
             <td>004</td>
             <td>成果形式</td>
             <td class="td-manage">
-                <a title="查看" onclick="x_admin_show('详细信息','chooseGraduateTitle-detail.html')" href="javascript:;">
+                <a title="查看" onclick="x_admin_show('详细信息','chooseGraduateTitle-view.html')" href="javascript:;">
                     <i class="layui-icon">&#xe63c;</i>
                 </a>
                 <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
@@ -133,16 +126,14 @@
             </td>
         </tr>
         <tr>
-            <td>
-            </td>
-            <td>201700917</td>
+            <td>第二选择</td>
             <td>老王</td>
             <td>课题名称</td>
             <td>课题类型</td>
             <td>004</td>
             <td>成果形式</td>
             <td class="td-manage">
-                <a title="查看" onclick="x_admin_show('详细信息','chooseGraduateTitle-detail.html')" href="javascript:;">
+                <a title="查看" onclick="x_admin_show('详细信息','chooseGraduateTitle-view.html')" href="javascript:;">
                     <i class="layui-icon">&#xe63c;</i>
                 </a>
                 <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">

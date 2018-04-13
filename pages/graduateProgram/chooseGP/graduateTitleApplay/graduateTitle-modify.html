@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>添加中期答辩小组</title>
+    <title>修改毕设课题</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
           content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="../../../css/font.css">
-    <link rel="stylesheet" href="../../../css/xadmin.css">
-    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../lib/layui/layui.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../../../js/xadmin.js"></script>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/xadmin.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../../js/xadmin.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <!--1-->
         <div class="layui-form-item">
             <label for="graDesignID" class="layui-form-label">
-                小组编号
+                毕设编号
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="graDesignID" name="username" required="" lay-verify="required"
@@ -35,7 +35,7 @@
         <!--2-->
         <div class="layui-form-item">
             <label for="titlename" class="layui-form-label">
-                小组名称
+                课题名称
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="titlename" name="username" required="" lay-verify="required"
@@ -48,7 +48,7 @@
         <!--3-->
         <div class="layui-form-item">
             <label for="teacherName" class="layui-form-label">
-                答辩地点
+                指导教师
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="teacherName" name="username" required="" lay-verify="required"
@@ -61,24 +61,24 @@
         <!--4-->
         <div class="layui-form-item">
             <label class="layui-form-label">
-                答辩时间
+                成果形式
             </label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="L_pass" placeholder="yyyy-MM-dd">
+                <input type="radio" name="resultType" lay-skin="primary" title="论文+项目" checked>
+                <input type="radio" name="resultType" lay-skin="primary" title="论文">
             </div>
         </div>
         <!--5-->
         <div class="layui-form-item">
             <label for="projectType" class="layui-form-label">
-                小组组长
+                课题类型
             </label>
             <div class="layui-input-inline">
                 <div class="layui-input-inline">
                     <select name="contrller" id="projectType">
                         <option>请选择</option>
-                        <option>A</option>
-                        <option>A</option>
-                        <option>A</option>
+                        <option>*</option>
+                        <option>*</option>
                     </select>
                 </div>
             </div>
@@ -86,22 +86,78 @@
                 必须选择
             </div>
         </div>
-        <!--4-->
+        <!--6-->
         <div class="layui-form-item">
-            <label class="layui-form-label">
-                设置检查教师
+            <label for="titleOrigin" class="layui-form-label">
+                课题来源
             </label>
             <div class="layui-input-inline">
-                检查教师为教师1的学生<input type="text" name="title" class="layui-input" placeholder="请输入检查教师"  >
-                检查教师为教师2的学生<input type="text" name="title" class="layui-input" placeholder="请输入检查教师"  >
-                检查教师为教师3的学生<input type="text" name="title" class="layui-input" placeholder="请输入检查教师"  >
+                <div class="layui-input-inline">
+                    <select name="contrller" id="titleOrigin">
+                        <option>请选择</option>
+                        <option>*</option>
+                        <option>*</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                必须选择
             </div>
         </div>
-
+        <!--7-->
+        <div class="layui-form-item">
+            <label for="titleType" class="layui-form-label">
+                题目类别
+            </label>
+            <div class="layui-input-inline">
+                <div class="layui-input-inline">
+                    <select name="contrller" id="titleType">
+                        <option>请选择</option>
+                        <option>*</option>
+                        <option>*</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                必须选择
+            </div>
+        </div>
+        <!--8-->
+        <div class="layui-form-item">
+            <label for="reqireStudentNum" class="layui-form-label">
+                需要人数
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="reqireStudentNum" name="username" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                必须填写
+            </div>
+        </div>
+        <!--9-->
+        <div class="layui-form-item">
+            <label for="targetRequire" class="layui-form-label">
+                目标要求
+            </label>
+            <div class="layui-input-inline">
+                <textarea placeholder="请输入内容" id="targetRequire" class="layui-textarea"></textarea>
+            </div>
+        </div>
         <!--10-->
         <div class="layui-form-item">
+            <label for="researchContent" class="layui-form-label">
+                研究内容
+            </label>
+            <div class="layui-input-inline">
+                <textarea placeholder="请输入内容" id="researchContent" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
             <label class="layui-form-label"></label>
-            <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+            <button  class="layui-btn" lay-filter="save" lay-submit="">
+                保存
+            </button>
         </div>
     </form>
 </div>
@@ -148,6 +204,8 @@
             });
             return false;
         });
+
+
     });
 </script>
 </body>

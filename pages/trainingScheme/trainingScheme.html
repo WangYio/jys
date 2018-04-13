@@ -39,17 +39,34 @@
 
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so">
-            <input type="text" class="layui-input" id="L_pass" placeholder="创建时间">
             <input type="text" name="username" placeholder="培养方案名称" autocomplete="off" class="layui-input">
+            <input type="text" class="layui-input" id="L_pass" placeholder="创建时间">
+            <div class="layui-input-inline">
+                <select name="contrller">
+                    <option>入学年份</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select name="contrller">
+                    <option>编辑状态</option>
+                    <option>已完成</option>
+                    <option>未完成</option>
+                </select>
+            </div>
             <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
         </form>
     </div>
 
     <!--操作区域-->
     <xblock>
-        <!--<button class="layui-btn" onclick="x_admin_show('添加培养方案','./trainingScheme-add.html')">添加培养方案 </button>-->
-        <button class="layui-btn"><a style="color: #fff;font-size: 14px;" href="trainingScheme-add.html" target="_self">添加培养方案 </a></button>
-        <button class="layui-btn layui-btn-normal" onclick="">导出数据 </button>
+        <button class="layui-btn"><a style="color: #fff;font-size: 14px;" href="trainingScheme-add.html">添加培养方案 </a></button>
+        <button class="layui-btn layui-btn-normal" onclick="">下载培养方案 </button>
     </xblock>
     <!--end 操作区域-->
 
@@ -81,10 +98,10 @@
             <td>软件</td>
             <td>软件</td>
             <td class="td-manage">
-                <a title="查看" onclick="x_admin_show('详细信息','order-view.html')" href="javascript:;">
+                <a title="查看详情" onclick="" href="trainingScheme-view.html">
                     <i class="layui-icon">&#xe63c;</i>
                 </a>
-                <a title="编辑"  onclick="x_admin_show('编辑','admin-edit.html')" href="javascript:;">
+                <a title="编辑"  onclick=""  href="trainingScheme-modify.html">
                     <i class="layui-icon">&#xe642;</i>
                 </a>
                 <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
