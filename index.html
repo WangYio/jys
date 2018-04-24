@@ -31,7 +31,7 @@
                 <dd><a href="./login.html">退出</a></dd>
             </dl>
         </li>
-        <li class="layui-nav-item to-index"><a href="#">首页</a></li>
+        <li class="layui-nav-item to-index"><a href="index.html">首页</a></li>
     </ul>
 </div>
 <!-- 顶部结束 -->
@@ -153,21 +153,6 @@
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
-                    <li>
-                        <a _href="pages/graduateProgram/graduateStudentManage/graduateStudentManage.html">
-                            <cite>指导学生管理</cite><!--老师 确认学生 填写任务书，
-                            填写论文评语，查看中期检查，毕业答辩情况-->
-                        </a>
-                    </li>
-                    <li>
-                        <a _href="pages/graduateProgram/fillProgramTable/student-graduateManage.html">
-                            <cite>学生-毕设管理</cite><!--学生，根据老师的任务书 填写进程表-->
-                            <!--学生 查看答辩安排，
-                            提交论文，下载资料 查看答辩结果（未审核）
-                            提交论文还需要教师的审核
-                        -->
-                        </a>
-                    </li>
                     <!--审核通过后，学生选择课题
                         可以选择  可以查看选择情况  可以调剂-->
                     <li>
@@ -178,18 +163,24 @@
                         <ul class="sub-menu">
                             <!--毕业课题管理 课题申请表与审核-->
                             <li>
-                                <a _href="pages/graduateProgram/chooseGP/graduateTitleApplay/graduateTitleApply.html">
+                                <a _href="pages/graduateProgram/projectManage/project-AC.html">
                                     <cite>课题添加及审核</cite><!--增删改查  列里边有院长审核情况和教研室审核情况-->
                                 </a><!--教研室主任和院长  可以统计 导出，最下边有发布-->
                             </li>
                             <li>
-                                <a _href="pages/graduateProgram/chooseGP/chooseGraduateTitle.html">
+                                <a _href="pages/graduateProgram/projectManage/chooseProject.html">
                                     <cite>选择课题</cite><!--学生 选择两个 提交-->
                                 </a>
                             </li>
                             <li>
-                                <a _href="pages/graduateProgram/chooseGP/chooseGPManage.html">
-                                    <cite>教研室-课题选择管理</cite><!--教研室主任  看谁没报（导出），
+                                <a _href="pages/graduateProgram/projectManage/chooseGPStudent.html">
+                                    <cite>选择毕设学生</cite><!--老师 确认学生 填写任务书，
+                            填写论文评语，查看中期检查，毕业答辩情况-->
+                                </a>
+                            </li>
+                            <li>
+                                <a _href="pages/graduateProgram/projectManage/projectManage.html">
+                                    <cite>课题管理</cite><!--教研室主任  看谁没报（导出），
 							看那个老师报的人数的多少，调剂学生通知（哪些学生还可以选择那些老师和课题）
 							发布结果  查看任务书填写情况 -->
                                 </a>
@@ -204,8 +195,8 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a _href="pages/graduateProgram/middleReport/middleReportSettle.html">
-                                    <cite>中期检查安排</cite><!--教研室主任 3组，互分。这个怎么安排，是写算法还是？-->
+                                <a _href="pages/graduateProgram/middleReport/middleReportGroup.html">
+                                    <cite>中期检查小组管理</cite><!--教研室主任 3组，互分。这个怎么安排，是写算法还是？-->
                                 </a>
                             </li>
                             <li>
@@ -223,8 +214,14 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a _href="pages/graduateProgram/graduateReport/graduateReportSettle.html">
-                                    <cite>毕业答辩安排</cite><!--教研室主任 3组，互分。这个怎么安排，是写算法还是？-->
+                                <a _href="pages/graduateProgram/graduateReport/graduateReportGroup.html">
+                                    <cite>毕业答辩小组管理</cite><!--教研室主任 3组，互分。这个怎么安排，是写算法还是？-->
+                                </a>
+                            </li>
+                            <li>
+                                <a _href="pages/graduateProgram/graduateReport/ThesisManage.html">
+                                    <cite>论文管理</cite><!--老师 确认学生 填写任务书，
+                            填写论文评语，查看中期检查，毕业答辩情况-->
                                 </a>
                             </li>
                             <li>
@@ -255,6 +252,26 @@
                             </li>
                         </ul>
                     </li>
+                    <!--学生-毕设管理-->
+                    <li>
+                        <a _href="pages/graduateProgram/studentGPM/studentGPM.html">
+                            <cite>学生-毕设管理</cite><!--学生，根据老师的任务书 填写进程表-->
+                            <!--学生 查看答辩安排，
+                            提交论文，下载资料 查看答辩结果（未审核）
+                            提交论文还需要教师的审核
+                        -->
+                        </a>
+                    </li>
+                    <!-- 文件审核管理-->
+                    <li>
+                        <a _href="pages/graduateProgram/fileManage/fileManage.html">
+                            <cite>文件管理</cite><!--学生，根据老师的任务书 填写进程表-->
+                            <!--学生 查看答辩安排，
+                            提交论文，下载资料 查看答辩结果（未审核）
+                            提交论文还需要教师的审核
+                        -->
+                        </a>
+                    </li>
                     <!--成绩管理 查看成绩信息，查看统计信息。
                     成绩录入在中期检查和毕业答辩中，点击相关按钮进行，填表录入，可以根据权限，控制，录入内容-->
                     <li>
@@ -274,6 +291,20 @@
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                </ul>
+            </li>
+            <!--培养方案管理-->
+            <li>
+                <a href="javascript:;">
+                    <cite>培养方案管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="pages/trainingScheme/trainingScheme.html">
+                            <cite>培养方案管理</cite>
+                        </a>
                     </li>
                 </ul>
             </li>
@@ -302,25 +333,6 @@
                     <li>
                         <a _href="pages/baseinfo/student.html">
                             <cite>学生信息</cite>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!--培养方案管理-->
-            <li>
-                <a href="javascript:;">
-                    <cite>培养方案管理</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a _href="pages/trainingScheme/trainingScheme-add.html">
-                            <cite>添加培养方案</cite>
-                        </a>
-                    </li>
-                    <li>
-                        <a _href="pages/trainingScheme/trainingScheme.html">
-                            <cite>培养方案管理</cite>
                         </a>
                     </li>
                 </ul>

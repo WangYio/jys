@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>添加中期答辩小组</title>
+    <title>修改中期答辩小组</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -14,28 +14,11 @@
     <script type="text/javascript" src="../../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../../lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../../js/xadmin.js"></script>
-    <style>
-        .layui-form-item .layui-input-inline {
-            width: 300px !important;
-        }
-
-        .y_left {
-            float: right;
-            width: 43%;
-            height: 200px;
-            background-color: #eee;
-        }
-
-        .y_left table {
-            margin-top: 200px;
-            box-shadow: 0 -2px 2px #ccc;
-        }
-    </style>
 </head>
 
 <body>
 <div class="x-body">
-    <form class="layui-form" style="width:55%;float:left;">
+    <form class="layui-form">
         <!--2-->
         <div class="layui-form-item">
             <label for="titlename" class="layui-form-label">
@@ -68,7 +51,7 @@
                 答辩时间
             </label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="L_pass" placeholder="yyyy-MM-dd">
+                <input type="text" class="layui-input" id="L_pass" placeholder="yyyy-MM-dd HH:mm:ss">
             </div>
         </div>
         <!--5-->
@@ -90,102 +73,13 @@
                 必须选择
             </div>
         </div>
-        <!--4-->
-        <div class="layui-form-item">
-            <label class="layui-form-label">
-                设置检查教师
-            </label>
-            <div class="layui-input-inline">
-                <div><span>教师1</span>
-                    <button class="layui-btn layui-btn-sm">添加学生</button>
-                    <textarea class="layui-textarea" name="" rows="5"></textarea>
-                </div>
-                <div><span>教师2</span>
-                    <button class="layui-btn layui-btn-sm">添加学生</button>
-                    <textarea class="layui-textarea" name="" rows="5"></textarea>
-                </div>
-                <div><span>教师3</span>
-                    <button class="layui-btn layui-btn-sm">添加学生</button>
-                    <textarea class="layui-textarea" name="" rows="5"></textarea>
-                </div>
-            </div>
-        </div>
 
         <!--10-->
         <div class="layui-form-item">
             <label class="layui-form-label"></label>
-            <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+            <button class="layui-btn" lay-submit="" lay-filter="add">保存</button>
         </div>
     </form>
-
-    <div class="y_left">
-        <table class="layui-table">
-            <thead>
-            <tr>
-                <th>
-                    <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">
-                        &#xe605;</i></div>
-                </th>
-                <th>学生姓名</th>
-                <th>班级</th>
-                <th>毕设题目</th>
-                <th>指导教师</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">
-                        &#xe605;</i></div>
-                </td>
-                <td>学生1</td>
-                <td>软件工程1</td>
-                <td>8888</td>
-                <td>教师1</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">
-                        &#xe605;</i></div>
-                </td>
-                <td>学生1</td>
-                <td>软件工程1</td>
-                <td>8888</td>
-                <td>教师1</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">
-                        &#xe605;</i></div>
-                </td>
-                <td>学生1</td>
-                <td>软件工程1</td>
-                <td>8888</td>
-                <td>教师1</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">
-                        &#xe605;</i></div>
-                </td>
-                <td>学生1</td>
-                <td>软件工程1</td>
-                <td>8888</td>
-                <td>教师1</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">
-                        &#xe605;</i></div>
-                </td>
-                <td>学生1</td>
-                <td>软件工程1</td>
-                <td>8888</td>
-                <td>教师1</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
 </div>
 <script>
     //答辩时间
@@ -194,6 +88,7 @@
 
         laydate.render({
             elem: '#L_pass' //指定元素
+            ,type: 'datetime'
         });
     });
 
@@ -229,6 +124,8 @@
             });
             return false;
         });
+
+
     });
 </script>
 </body>
