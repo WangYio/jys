@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>填写课题申请表</title>
+    <title>毕业设计（包括实习）申请表</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -18,8 +18,23 @@
 
 <body>
 <div class="x-body" style="margin:20px auto 50px auto; width:90%;">
-    <button class="btn-primary btn">保存</button>
-    <button class="btn-primary btn">提交</button>
+    <button class="btn-primary btn" onclick="basicSave()">保存</button>
+    <button class="btn-primary btn" onclick="basicCommit()">提交</button>
+    <script>
+    	//保存
+    	function basicSave(){
+    		layer.alert("保存成功",function(){
+    			x_admin_close()
+    		})
+    	}
+    	//提交
+    	function basicCommit(){
+    		layer.confirm("您确定要提交此次申请吗？",function(){
+    			x_admin_close()
+    		})
+    	}
+    </script>
+    <form action="" class="layui-form">
     <table class="table table-bordered ">
         <caption style="text-align: center;">
         	<h1>太原科技大学计算机科学与技术学院</h1>
@@ -33,8 +48,8 @@
             </td>
             <td>性别</td>
             <td>
-         	           男<input type="radio" name="sex" >&nbsp;&nbsp;
-  		 	 	女 <input type="radio" name="sex" >
+         	           <input type="radio" name="sex"  title="男">
+ 	 					<input type="radio" name="sex"  title="女">
                 
             </td>
             <td>专业班级</td>
@@ -91,7 +106,7 @@
             		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime1" placeholder="2018-04-25" class="form-control">
             </td>
             
         </tr>
@@ -112,7 +127,7 @@
             		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime2" placeholder="2018-04-25" class="form-control">
             </td>
             
         </tr>
@@ -133,7 +148,7 @@
             		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime3" placeholder="2018-04-25" class="form-control">
             </td>
             
         </tr>
@@ -154,7 +169,7 @@
             		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime4" placeholder="2018-04-25" class="form-control">
             </td>
             
         </tr>
@@ -175,14 +190,14 @@
             		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime6" placeholder="2018-04-25" class="form-control">
             </td>
             
         </tr>
         </tbody>
     </table>
     <span>说明：一式两份，一份装订入学生毕业设计（论文）内，一份交学院（直属系）。</span>
-
+</form>
 </div>
 <script>
 	//创建时间
@@ -192,8 +207,42 @@
             elem: '#applytime',//指定元素,
         });
     });
-	
-	
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#applytime1',//指定元素,
+        });
+    });
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#applytime2',//指定元素,
+        });
+    });
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#applytime3',//指定元素,
+        });
+    });
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#applytime4',//指定元素,
+        });
+    });
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#applytime5',//指定元素,
+        });
+    });
+	layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#applytime6',//指定元素,
+        });
+    });
 	
     //照片上传
     layui.use('upload', function () {
