@@ -34,6 +34,7 @@
     		})
     	}
     </script>
+    		
     <form action="" class="layui-form">
     <table class="table table-bordered ">
         <caption style="text-align: center;">
@@ -48,8 +49,7 @@
             </td>
             <td>性别</td>
             <td>
-         	           <input type="radio" name="sex"  title="男">
- 	 					<input type="radio" name="sex"  title="女">
+         	           <input type="text" class="form-control" value="">
                 
             </td>
             <td>专业班级</td>
@@ -72,17 +72,21 @@
         <tr>
             <td>学生申请</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            	
+                <textarea name="" cols="100" rows="4" class="form-control"></textarea>
             </td>
-            <td><div style="height: 50px;">申请人签名</div>
+            <td>
+            	<div style="height: 40px;">申请人签名</div>
             <hr />
-            <div>申请时间</div>
-                               
+            <div style="height: 10px;">申请时间</div>
+                             
             </td>
             
             <td colspan="1">
-            	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            	<div style="height: 40px;">
+            		<img src="../../../images/bg.png" width="165px" height="50px"/>
+            		<input onclick="studentSign()"  class="layui-btn" id="" style="float: right; width: 65px;" value="签名"></input>
+            		
             	</div>
                 <hr />
                 <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
@@ -93,17 +97,22 @@
         <tr>
             <td>家长意见</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            	<div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
-            <td><div style="height: 50px;">家长签名</div>
+            <td><div style="height: 40px;">家长签名</div>
             <hr />
             <div>签字时间</div>
                                
             </td>
             
             <td colspan="1">
-            	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            	<div style="height: 40px;">
+            		<img src="../../../images/bg.png" width="170px" height="50px"/>
+            		<input onclick="testtest()" type="button" class="layui-btn" id="test1" style="float: right; width: 65px;" value="签名"></input>
             	</div>
                 <hr />
                 <input type="datetime" id="applytime1" placeholder="2018-04-25" class="form-control">
@@ -114,7 +123,11 @@
         <tr>
             <td>指导教师意见</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            	<div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
             <td><div style="height: 50px;">指导教师签名</div>
             <hr />
@@ -124,7 +137,8 @@
             
             <td colspan="1">
             	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            		<img src="../../../images/bg.png" width="170px" height="50px"/>
+            		<button type="button" class="layui-btn" id="test1" style="float: right;">签名</button>
             	</div>
                 <hr />
                 <input type="datetime" id="applytime2" placeholder="2018-04-25" class="form-control">
@@ -135,7 +149,11 @@
         <tr>
             <td>学生部门意见</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            	<div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
             <td><div style="height: 50px;">主管书记签名</div>
             <hr />
@@ -145,7 +163,8 @@
             
             <td colspan="1">    
             	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            		<img src="../../../images/bg.png" width="170px" height="50px"/>
+            		<button type="button" class="layui-btn" id="test1" style="float: right;">签名</button>
             	</div>
                 <hr />
                 <input type="datetime" id="applytime3" placeholder="2018-04-25" class="form-control">
@@ -156,7 +175,11 @@
         <tr>
             <td>教研室意见</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            	<div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
             <td><div style="height: 50px;">教研室主任签名</div>
             <hr />
@@ -166,7 +189,8 @@
             
             <td colspan="1">    
             	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            		<img src="../../../images/bg.png" width="170px" height="50px"/>
+            		<button type="button" class="layui-btn" id="test1" style="float: right;">签名</button>
             	</div>
                 <hr />
                 <input type="datetime" id="applytime4" placeholder="2018-04-25" class="form-control">
@@ -177,7 +201,11 @@
         <tr>
             <td>计算机学院意见</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            	<div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
             <td><div style="height: 50px;">主管院长签名</div>
             <hr />
@@ -187,7 +215,8 @@
             
             <td colspan="1">    
             	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            		<img src="../../../images/bg.png" width="170px" height="50px"/>
+            		<button type="button" class="layui-btn" id="test1" style="float: right;">签名</button>
             	</div>
                 <hr />
                 <input type="datetime" id="applytime6" placeholder="2018-04-25" class="form-control">
@@ -200,49 +229,23 @@
 </form>
 </div>
 <script>
-	//创建时间
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime1',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime2',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime3',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime4',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime5',//指定元素,
-        });
-    });
-	layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime6',//指定元素,
-        });
-    });
+	
+	//上传签名
+	function studentSign(){
+		layer.prompt({
+  			  formType: 1,
+			  value: '',
+			  title: '请输入签名密码',
+			  //area: ['800px', '350px'] //自定义文本域宽高
+			}, function(value, index, elem){
+				if(value==''){
+					
+				}else{
+					 layer.close(index);
+				}
+					  	})
+			}
+
 	
     //照片上传
     layui.use('upload', function () {
