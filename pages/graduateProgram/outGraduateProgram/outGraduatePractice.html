@@ -20,20 +20,7 @@
 <div class="x-body" style="margin:20px auto 50px auto; width:90%;">
     <button class="btn-primary btn" onclick="basicSave()">保存</button>
     <button class="btn-primary btn" onclick="basicCommit()">提交</button>
-    <script>
-    	//保存
-    	function basicSave(){
-    		layer.alert("保存成功",function(){
-    			x_admin_close()
-    		})
-    	}
-    	//提交
-    	function basicCommit(){
-    		layer.confirm("您确定要提交此次申请吗？",function(){
-    			x_admin_close()
-    		})
-    	}
-    </script>
+   
     <form action="" class="layui-form">
     <table class="table table-bordered ">
         <caption style="text-align: center;">
@@ -47,15 +34,13 @@
                         <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
                     </div>
            	 </div>
-            <!--<div style="float: right;">
-            	<input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
-            </div>-->
+           
         </caption>
          <tbody>
             <tr>
                 <td rowspan="8">课程情况</td>
                 <td>课程名称</td>
-                <td colspan="5">
+                <td colspan="6">
                     <input  class="form-control" type="text">
                 </td>
             </tr>
@@ -164,7 +149,11 @@
             <tr>
             <td>校内导师审批签字</td>
             <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+                <div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
             <td><div style="height: 50px;">导师签名</div>
             <hr />
@@ -172,30 +161,36 @@
                                
             </td>
             
-            <td colspan="1">
-            	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            <td colspan="3" >
+            	<div style="height: 50px; width: 230px;">
+            		<img src="../../../images/bg.png" width="150px" height="50px"/>
+            		<input onclick="tutorSign()" value="签名" type="button" class="layui-btn" id="test1" style="float: right;"></input>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime6" placeholder="2018-04-25" class="form-control">
             </td>
             
         </tr>
         <tr>
             <td>教研室主任审批签字</td>
-            <td colspan="3">
-                <textarea name="" cols="100" rows="5" class="form-control"></textarea>
+            <td colspan="3" >
+                <div>
+            		<input type="radio" name="opinion" id="opinion" value="" title="同意"/>
+            		<input type="radio" name="opinion" id="opinion" value="" title="不同意"/>
+            	</div>
+                <textarea name="" cols="100" rows="3" class="form-control"></textarea>
             </td>
-            <td><div style="height: 50px;">教研室主任签名</div>
+            <td><div style="height: 50px;">主任签名</div>
             <hr />
             <div>签字时间</div>
             </td>
-            <td colspan="1">
-            	<div style="height: 50px;">
-            		<button type="button" class="layui-btn" id="test1" style="float: right;">上传签名</button>
+            <td colspan="3">
+            	<div style="height: 50px; width=230px;">
+            		<img src="../../../images/bg.png" width="150px" height="50px"/>
+            		<input type="button" value="签字" class="layui-btn" id="test1" style="float: right;"></input>
             	</div>
                 <hr />
-                <input type="datetime" id="applytime" placeholder="2018-04-25" class="form-control">
+                <input type="datetime" id="applytime6" placeholder="2018-04-25" class="form-control">
             </td>
             </tbody>
     </table>
@@ -203,79 +198,34 @@
 </form>
 </div>
 <script>
-	//创建时间
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime1',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime2',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime3',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime4',//指定元素,
-        });
-    });
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime5',//指定元素,
-        });
-    });
-	layui.use('laydate', function () {
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#applytime6',//指定元素,
-        });
-    });
-	
-    //照片上传
-    layui.use('upload', function () {
-        var $ = layui.jquery, upload = layui.upload;
-        var uploadInst = upload.render({
-            elem: '#test1'
-            , url: '/upload/'
-            , before: function (obj) {
-                //预读本地文件示例，不支持ie8
-                obj.preview(function (index, file, result) {
-                    $('#demo1').attr('src', result); //图片链接（base64）
-                });
-            }
-            , done: function (res) {
-                //如果上传失败
-                if (res.code > 0) {
-                    return layer.msg('上传失败');
-                }
-                //上传成功
-            }
-            , error: function () {
-                //演示失败状态，并实现重传
-                var demoText = $('#demoText');
-                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
-                demoText.find('.demo-reload').on('click', function () {
-                    uploadInst.upload();
-                });
-            }
-        });
-    })//end 照片上传
+	//保存
+    	function basicSave(){
+    		layer.alert("保存成功",function(){
+    			x_admin_close()
+    		})
+    	}
+    	//提交
+    	function basicCommit(){
+    		layer.confirm("您确定要提交此次申请吗？",function(){
+    			x_admin_close()
+    		})
+    	}
+	//上传签名
+	function tutorSign(){
+		layer.prompt({
+  			  formType: 1,
+			  value: '',
+			  title: '请输入签名密码',
+			  //area: ['800px', '350px'] //自定义文本域宽高
+			}, function(value, index, elem){
+				if(value==''){
+					
+				}else{
+					 layer.close(index);
+				}
+					  	})
+			}
+    
 </script>
 </body>
 
