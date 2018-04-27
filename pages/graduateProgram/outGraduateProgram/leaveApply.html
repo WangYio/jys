@@ -58,17 +58,7 @@
         <tr>
             <td width="100px">请假起止日期</td>
             <td width="450px">
-            	<div class="layui-form-item">
-            	<div class="layui-inline">
-			    <div class="layui-input-inline" style="width: 150px;">
-			      <input type="text" name="price_min" placeholder="选择开始日期" autocomplete="off" class="form-control">
-			    </div>
-			    <div class="layui-form-mid">至</div>
-			    <div class="layui-input-inline" style="width: 150px;">
-			      <input type="text" name="price_max" placeholder="选择结束日期" autocomplete="off" class="form-control">
-			    </div>
-			  </div>
-			  </div>
+            	<input id="applytimeRange" type="text" name="" placeholder="点击选择请假日期" autocomplete="off" class="form-control" >
             </td>
             <td>请假天数</td>
             <td colspan="3">
@@ -271,21 +261,12 @@
         <tr>
         	<td>销假日期</td>
             <td  width="100px">
-            	<input type="text" class="form-control" />
+            	<input type="text" id="applytimeCancel" class="form-control" />
             </td>
             <td width="100px">超假时间</td>
             <td width="450px" colspan="3">
-            	<div class="layui-form-item">
-            	<div class="layui-inline">
-			    <div class="layui-input-inline" style="width: 150px;">
-			      <input type="text" name="price_min" placeholder="选择开始日期" autocomplete="off" class="form-control">
-			    </div>
-			    <div class="layui-form-mid">至</div>
-			    <div class="layui-input-inline" style="width: 150px;">
-			      <input type="text" name="price_max" placeholder="选择结束日期" autocomplete="off" class="form-control">
-			    </div>
-			  </div>
-			  </div>
+            	<input type="text"  id="applytimeOut" name="" placeholder="选择超假时间日期范围" autocomplete="off" class="form-control">
+            	
             </td>
             
         </tr>
@@ -295,6 +276,24 @@
 </form>
 </div>
 <script>
+	
+	//日期范围
+	layui.use('laydate',function(){
+		var laydate=layui.laydate;
+		laydate.render({
+		elem:'#applytimeRange'
+		,range:true
+		});
+		
+		laydate.render({
+			elem:'#applytimeOut'
+			,range:true
+		});
+		laydate.render({
+			elem:'#applytimeCancel',
+		});
+	});
+	
 	
 	//上传签名
 	function studentSign(){
