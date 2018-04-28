@@ -62,7 +62,7 @@
             </td>
             <td>请假天数</td>
             <td colspan="3">
-            	<input type="text" class="form-control" />
+            	<input type="text" id="applyDay" class="form-control" />
             </td>
         </tr>
         
@@ -266,9 +266,7 @@
             <td width="100px">超假时间</td>
             <td width="450px" colspan="3">
             	<input type="text"  id="applytimeOut" name="" placeholder="选择超假时间日期范围" autocomplete="off" class="form-control">
-            	
             </td>
-            
         </tr>
         </tbody>
     </table>
@@ -283,6 +281,17 @@
 		laydate.render({
 		elem:'#applytimeRange'
 		,range:true
+		 ,done: function(value, date, endDate){
+
+	var t1 = (date.year+'/'+date.month+'/'+date.date)
+	var dateBegin=new Date(t1)
+	var t2 = (endDate.year+'/'+endDate.month+'/'+endDate.date)
+	var dateEnd = new Date(t2)
+	var dateDiff = dateEnd.getTime() - dateBegin.getTime();//时间差的毫秒数
+	var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));//计算出相差天数
+	$("#applyDay").val(dayDiff+1)
+	
+	  }
 		});
 		
 		laydate.render({
