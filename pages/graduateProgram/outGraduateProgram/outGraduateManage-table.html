@@ -26,6 +26,7 @@
 	    <li>请假申请</li>
 	    <li>自我管理协议书</li>
 	    <li>保证书</li>
+	    <li>附件</li>
 	    <div style="margin-top: 5px;">
 	    	<button onclick="checkCommit()" class="layui-btn" style="float: right;">提交</button>
     		<button onclick="checkSave()" class="layui-btn" style="float: right; margin-right: 10px;">保存</button>
@@ -651,11 +652,7 @@
         <caption style="text-align: center;">
         	<h1>计算机科学与技术学院</h1>
             <h3>学生实施校外实践课程自我管理协议书</h3>
-            
-            
-            
-            
-            
+         
             
         </caption>
          <tbody>
@@ -808,6 +805,64 @@
             </tbody>
     </table>
 </form>
+</div>
+<!--附件信息-->
+<div class="layui-tab-item">
+ <form action="" class="layui-form">
+    <table class="table table-bordered ">
+        <caption style="text-align: center;">
+        	<h1>附件上传</h1>
+        </caption>
+         <tbody>
+           
+             <tr>
+             	<td colspan="6">
+             		<div class="layui-form-item">
+		            	<div class="layui-inline">
+					   <button type="button" class="layui-btn " id="upload_img_icon">上传图片</button>
+					  </div>
+					  </div>
+             	</td>
+               
+            </tr>
+             
+            <tr>
+            
+            <td colspan="6">
+             		<div class="layui-form-item">
+		            	<div class="layui-inline">
+		            		<div class="upload-img-box">
+		            			<!--<img src="test.png" height="700px" width="900px"/>-->
+		            			<dd class="upload-icon-img" >
+		            				<div class="upload-pre-item" style="">
+		            				<!--<button onclick="deleteImg($(this))" class="layui-btn">
+		            				<i    class="layui-icon" ></i>
+		            				<button>-->
+		            				<img src="test.png" width="600px" height="800px"  >
+		            				
+		            				</div>
+		            			</dd>
+		            			<br />
+		            			<dd class="upload-icon-img" >
+		            				<div class="upload-pre-item">
+		            				<!--<button onclick="deleteImg($(this))" class="layui-btn">
+		            				<i    class="layui-icon" ></i>
+		            				<button>-->
+		            				<img src="test1.png"  >
+		            				
+		            				</div>
+		            			</dd>
+       						 </div>
+					  </div>
+					  </div>
+             	</td>
+            
+      	 	 </tr>
+       
+            </tbody>
+    </table>
+</form>
+</div>
      		
      	</div>
   </div>
